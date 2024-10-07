@@ -100,10 +100,10 @@ public class Person implements Comparable<Person> {
 	public int compareTo(Person p) {
 		if (this.getPrivilege() < p.getPrivilege()) {
 			return -1;
-		} else if (this.getPrivilege() == p.getPrivilege()) {
-			return 0;
-		} else {
+		} else if (this.getPrivilege() > p.getPrivilege()) {
 			return 1;
+		} else {
+			return 0;
 		}
 	}
 
