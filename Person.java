@@ -12,6 +12,11 @@ public class Person implements Comparable<Person> {
 			this.pronouns = "None";
 			this.background = "None";
 		}
+
+		@Override
+		public String toString() {
+			return this.pronouns + "\n" + this.background;
+		}
 	}
 	// CONSTANT VARIABLES
 	public static final String DEFAULT_NAME = "Jamie Doe";
@@ -92,14 +97,16 @@ public class Person implements Comparable<Person> {
 	}
 
 	// INTERFACE METHODS
-	/***** TODO: (Part 1) override compareTo method to implement Comparable interface*****/
+	/*****
+	 * TODO: (Part 1) override compareTo method to implement Comparable interface
+	 *****/
 
 	@Override
 	public int compareTo(Person p) {
 		// TODO Auto-generated method stub
-		if (p.getPrivilege() < this.getPrivilege()) {
+		if (this.getPrivilege() < p.getPrivilege()) {
 			return -1;
-		} else if (p.getPrivilege() == this.getPrivilege()) {
+		} else if (this.getPrivilege() == p.getPrivilege()) {
 			return 0;
 		} else {
 			return 1;
