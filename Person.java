@@ -96,14 +96,8 @@ public class Person implements Comparable<Person> {
 			this.privilege == otherPerson.privilege;	
 	}
 
-	// INTERFACE METHODS
-	/*****
-	 * TODO: (Part 1) override compareTo method to implement Comparable interface
-	 *****/
-
 	@Override
 	public int compareTo(Person p) {
-		// TODO Auto-generated method stub
 		if (this.getPrivilege() < p.getPrivilege()) {
 			return -1;
 		} else if (this.getPrivilege() == p.getPrivilege()) {
