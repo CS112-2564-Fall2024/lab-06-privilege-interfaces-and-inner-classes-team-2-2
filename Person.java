@@ -1,7 +1,18 @@
-public class Person
-{
-	/***** TODO: (Part 2) create helper inner class for Identity*****/
+public class Person implements Comparable<Person> {
+	class Identity {
+		private String pronouns;
+		private String background;
 
+		public Identity(String pronouns, String backGround) {
+			this.pronouns = pronouns;
+			this.background = backGround;
+		}
+
+		public Identity() {
+			this.pronouns = "None";
+			this.background = "None";
+		}
+	}
 	// CONSTANT VARIABLES
 	public static final String DEFAULT_NAME = "Jamie Doe";
 	public static final String DEFAULT_STORY =  "Unknown";
@@ -82,4 +93,17 @@ public class Person
 
 	// INTERFACE METHODS
 	/***** TODO: (Part 1) override compareTo method to implement Comparable interface*****/
+
+	@Override
+	public int compareTo(Person p) {
+		// TODO Auto-generated method stub
+		if (p.getPrivilege() < this.getPrivilege()) {
+			return -1;
+		} else if (p.getPrivilege() == this.getPrivilege()) {
+			return 0;
+		} else {
+			return 1;
+		}
+	}
+
 }
